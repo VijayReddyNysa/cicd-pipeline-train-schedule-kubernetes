@@ -44,11 +44,11 @@ pipeline {
       steps {
        input "Sure about Deploying to Production?"
        milestone(1)
-        kubernetesDeploy {
+        kubernetesDeploy (
          kubeconfigId: 'kubeconfig',
          configs: 'train-schedul-kube.yaml'
          enableConfigSubstitutions: true
-        }
+        )
       }
     }
   }
