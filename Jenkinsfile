@@ -42,7 +42,7 @@ pipeline {
        branch 'master' 
       }
       steps {
-       Input "Sure about Deploying to Production?'
+       input "Sure about Deploying to Production?"
        milestone(1)
         kubernetesDeploy {
          kubeconfigId: 'kubeconfig',
